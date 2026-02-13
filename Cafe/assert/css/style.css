@@ -1,0 +1,297 @@
+/* ========================================
+   ADMIN PANEL - PURE WHITE + COFFEE ACCENT
+   ======================================== */
+
+:root {
+    --bg-main: #f5f5f5;
+    --bg-white: #ffffff;
+    --accent: #c19a6b;         /* Coffee Gold */
+    --accent-light: #e6d3b3;
+    --text-main: #2b2b2b;
+    --text-muted: #777777;
+    --border: #e6e6e6;
+    --success: #2e7d32;
+    --danger: #c62828;
+}
+
+/* ========================================
+   LOGIN PAGE
+======================================== */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-main);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+}
+
+/* ========================================
+   ADMIN LAYOUT
+======================================== */
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background: var(--bg-main);
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--accent);
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.main-content {
+    padding: 2.5rem;
+    color: var(--text-main);
+}
+
+.main-content h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* ========================================
+   STATS
+======================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    border-left: 4px solid var(--accent);
+}
+
+.stat-card .label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stat-card .value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+/* ========================================
+   FORMS
+======================================== */
+
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea,
+.login-container input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-white);
+    color: var(--text-main);
+    transition: 0.2s ease;
+}
+
+.admin-layout input:focus,
+.admin-layout select:focus,
+.admin-layout textarea:focus,
+.login-container input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(193,154,107,0.2);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #b48a55;
+}
+
+/* ========================================
+   TABLES
+======================================== */
+
+.admin-layout table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+}
+
+.admin-layout thead {
+    background: #fafafa;
+}
+
+.admin-layout th {
+    padding: 0.9rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.admin-layout td {
+    padding: 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.admin-layout tr:hover {
+    background: #fcfcfc;
+}
+
+/* ========================================
+   BADGES
+======================================== */
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.badge-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-confirmed {
+    background: #e6f4ea;
+    color: #2e7d32;
+}
+
+.badge-cancelled {
+    background: #fdecea;
+    color: #c62828;
+}
+
+/* ========================================
+   ALERTS
+======================================== */
+
+.alert-success {
+    background: #e6f4ea;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 968px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================================
+   CLICK FIX
+======================================== */
+
+.scroll-progress,
+.cursor-dot {
+    pointer-events: none !important;
+}
